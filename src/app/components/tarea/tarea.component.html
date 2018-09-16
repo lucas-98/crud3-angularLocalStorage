@@ -1,0 +1,14 @@
+<div class="card mb-2">
+  <div class="card-body">
+    <div class="card-header d-flex justify-content-between align-item-center">
+      {{tarea.titulo}}
+      <div >
+        <button class="btn btn-primary " (click)="tarea.oculto = !tarea.oculto">Ver con detalle</button>
+        <button class="btn btn-danger" (click)="eliminarTarea(tarea)">Delete</button>
+      </div>
+    </div>
+    <div class="card-body " [hidden]="tarea.oculto">
+      {{tarea.descripcion}}
+    </div>
+  </div>
+</div>
